@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 13 | Recording & Music Production</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.9);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG11c2ljJTIwc3R1ZGlvfGVufDB8fHx8MTY5NTU4MDg1Ng&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 6px #000;
+        }
+
+        .hero a {
+            background-color: #f39c12;
+            color: #000;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #e67e22;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 50px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #f39c12;
+        }
+
+        .about, .services, .portfolio, .contact {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: #111;
+            padding: 30px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            background-color: #222;
+        }
+
+        .portfolio .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Form */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f39c12;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services .service-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Studio 13</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Welcome to Studio 13</h2>
+        <p>Professional recording, mixing, and music production for artists, bands, and creators.</p>
+        <a href="#contact">Book a Session</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Studio 13 is a state-of-the-art recording and music production studio. Our mission is to help artists bring their vision to life with top-quality sound engineering, mixing, and mastering. Whether you're a solo artist, band, or producer, we provide the tools and expertise to create professional music.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Recording</h3>
+                <p>High-quality recording for vocals, instruments, and full bands in a professional environment.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mixing</h3>
+                <p>Expert mixing to make your tracks sound polished and ready for release.</p>
+            </div>
+            <div class="service-item">
+                <h3>Mastering</h3>
+                <p>Final mastering to ensure your music sounds perfect on all platforms and devices.</p>
+            </div>
+            <div class="service-item">
+                <h3>Music Production</h3>
+                <p>From songwriting to full production, we help bring your creative ideas to life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG11c2ljJTIwc3R1ZGlvfGVufDB8fHx8MTY5NTU4MDg1Ng&ixlib=rb-4.0.3&q=80&w=400" alt="Studio Session 1">
+            <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fG11c2ljJTIwc3R1ZGlvfGVufDB8fHx8MTY5NTU4MDg1Ng&ixlib=rb-4.0.3&q=80&w=400" alt="Studio Session 2">
+            <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fG11c2ljJTIwc3R1ZGlvfGVufDB8fHx8MTY5NTU4MDg1Ng&ixlib=rb-4.0.3&q=80&w=400" alt="Studio Session 3">
+            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG11c2ljJTIwc3R1ZGlvfGVufDB8fHx8MTY5NTU4MDg1Ng&ixlib=rb-4.0.3&q=80&w=400" alt="Studio Session 4">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Studio 13. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
